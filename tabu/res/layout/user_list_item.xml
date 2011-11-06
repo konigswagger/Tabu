@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" android:gravity="center_vertical|center_horizontal" android:padding="10dp" android:soundEffectsEnabled="true">
+
+    <QuickContactBadge
+        android:id="@+id/qc_user_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:padding="10dp" android:clickable="false" android:scaleType="fitXY" android:src="@drawable/user_picture_default" android:maxWidth="100dp" android:maxHeight="100dp" android:minHeight="100dp" android:minWidth="100dp" android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text not set"
+        android:textAppearance="?android:attr/textAppearanceLarge" android:clickable="true" android:gravity="center_vertical|center_horizontal" android:padding="10dp" android:textStyle="bold" android:textSize="30sp" android:minWidth="250dp"/>
+
+</LinearLayout>
