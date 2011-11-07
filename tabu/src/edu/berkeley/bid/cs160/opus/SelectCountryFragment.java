@@ -12,13 +12,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class SelectUserFragment extends ListFragment {
+public class SelectCountryFragment extends ListFragment {
 	ListView lv;
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		
-
 		return super.onCreateView(inflater, container, savedInstanceState);
 	}
 	
@@ -26,7 +24,8 @@ public class SelectUserFragment extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setListAdapter(new UserAdapter());		
+		setListAdapter(new CountryAdapter());
+		
 	}
 	
 	@Override
@@ -40,13 +39,13 @@ public class SelectUserFragment extends ListFragment {
 				
 				LinearLayout ll = (LinearLayout) view;
 				TextView tv = (TextView) ll.getChildAt(1);
-				if (tv.getText() == "New User") {
-					Intent intent = new Intent(SelectUserFragment.this.getActivity(), ProfileActivity.class);
+				if (tv.getText() == "China") {
+					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), ArcadeActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		            startActivity(intent);
 					
 				} else {
-					Intent intent = new Intent(SelectUserFragment.this.getActivity(), MainActivity.class);
+					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), SelectCountryActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		            startActivity(intent);
 				}
@@ -55,4 +54,5 @@ public class SelectUserFragment extends ListFragment {
 		
 	}
 
+	
 }

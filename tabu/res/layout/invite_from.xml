@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30px"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="14dp"
+        android:paddingBottom="30px"
+        android:paddingLeft="50px"
+        android:text="INVITE FROM"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50px" />
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="205dp"
+        android:gravity="center_horizontal"
+        android:text="FACEBOOK"
+        android:textSize="50px"
+        android:width="400px" 
+        android:onClick="showDialogFacebook"/>
+
+    <Button
+        android:id="@+id/contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="21dp"
+        android:layout_y="415dp"
+        android:gravity="center_horizontal|center"
+        android:text="CONTACTS"
+        android:textSize="50px"
+        android:width="400px" 
+        android:onClick="showDialogContacts"/>
+
+</AbsoluteLayout>

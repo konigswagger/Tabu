@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     }
     
     public void onArcadeClicked(View view) {
-    	Intent intent = new Intent(this, ArcadeActivity.class);
+    	Intent intent = new Intent(this, SelectCountryActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
 				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
     }
     
     public void onInviteClicked(View view) {
-    	Intent intent = new Intent(this, ArcadeActivity.class);
+    	Intent intent = new Intent(this, InviteActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
 				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

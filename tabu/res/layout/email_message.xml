@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="750dp"
+        android:layout_height="376dp"
+        android:layout_x="211dp"
+        android:layout_y="262dp"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="740dp"
+        android:layout_height="wrap_content"
+        android:layout_x="216dp"
+        android:layout_y="157dp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="745dp"
+        android:layout_height="wrap_content"
+        android:layout_x="216dp"
+        android:layout_y="74dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="267dp"
+        android:text="MESSAGE:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="155dp"
+        android:text="SUBJECT:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="16dp"
+        android:layout_y="72dp"
+        android:text="TO:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40px" />
+
+</AbsoluteLayout>

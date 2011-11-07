@@ -18,6 +18,9 @@
         <activity android:name=".CameraSample" android:label="Take a picture!"></activity>
         <activity android:name=".ArcadeActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".InviteActivity"></activity>
+        <activity android:name=".SelectCountryActivity"></activity>
 
     </application>
 </manifest>
