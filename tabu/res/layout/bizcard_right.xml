@@ -20,7 +20,8 @@
             android:layout_marginRight="139dp"
             android:background="#6600FF"
             android:text="Continue"
-            android:textSize="50dp" />
+            android:textSize="50dp"
+            android:onClick="onContinueClicked" />
 
     </RelativeLayout>
 

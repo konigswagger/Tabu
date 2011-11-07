@@ -21,6 +21,7 @@
             android:layout_marginTop="15dp"
             android:background="#6600FF"
             android:text="A"
+            android:onClick="onButtonAClicked"
             android:textSize="60dp"
      	>
             
@@ -33,6 +34,7 @@
             android:layout_marginTop="15dp"
             android:background="#6600FF"
             android:text="B"
+            android:onClick="onButtonBClicked"
             android:textSize="60dp" >
 		</Button>
         <Button
@@ -43,6 +45,7 @@
             android:layout_marginTop="15dp"
             android:background="#6600FF"
             android:text="C"
+            android:onClick="onButtonCClicked"
             android:textSize="60dp">
         </Button>
 
@@ -54,6 +57,7 @@
             android:layout_marginTop="55dp"
             android:background="#6600FF"
             android:text="Continue"
+            android:onClick="onContinueClicked"
             android:textSize="50dp"
             android:visibility="invisible" 
         >

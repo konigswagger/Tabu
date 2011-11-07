@@ -22,6 +22,7 @@
             android:layout_marginLeft="203dp"
             android:background="#6600FF"
             android:text="Start"
+            android:onClick="onContinueClicked"
             android:textSize="50dp" />
 
     </RelativeLayout>
