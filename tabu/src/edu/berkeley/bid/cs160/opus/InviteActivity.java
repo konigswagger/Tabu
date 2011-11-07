@@ -22,8 +22,8 @@ public class InviteActivity extends Activity implements OnClickListener{
         setContentView(R.layout.main);
         contacts = (Button) findViewById(R.id.contacts);
         facebook = (Button) findViewById(R.id.facebook);
-        facebook.setOnClickListener(this);
-        contacts.setOnClickListener(this);
+//        facebook.setOnClickListener(this);
+//        contacts.setOnClickListener(this);
         /*
         facebook.setOnClickListener(new OnClickListener() {
             @Override

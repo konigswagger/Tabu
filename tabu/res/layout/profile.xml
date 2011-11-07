@@ -8,13 +8,13 @@
         android:id="@+id/fragmentP1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" android:layout_gravity="center_vertical|center_horizontal"/>
+        android:layout_weight="0.3" android:layout_gravity="center_vertical|center_horizontal"/>
     
-    <fragment android:name="edu.berkeley.bid.cs160.opus.profileInfoFrag"
+    <fragment android:name="edu.berkeley.bid.cs160.opus.profileEditFrag"
         android:id="@+id/fragmentP2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" android:layout_gravity="center_vertical|center_horizontal"/>
+        android:layout_weight="0.7" android:layout_gravity="center_vertical|center_horizontal"/>
     
 
 </LinearLayout>

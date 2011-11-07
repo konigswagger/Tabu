@@ -21,6 +21,5 @@
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".InviteActivity"></activity>
         <activity android:name=".SelectCountryActivity"></activity>
-
     </application>
 </manifest>

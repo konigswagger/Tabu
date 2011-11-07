@@ -1,16 +1,22 @@
 package edu.berkeley.bid.cs160.opus;
 
+import android.graphics.drawable.Drawable;
+
 public class User {
 	private String name;
-	private String path;
+	private int drawable;
 	
-	public User(String name, String path) {
+	public User(String name, int drawable) {
 		this.name = name;
-		this.path = path;
+		this.drawable = drawable;
 	}
 	
 	public String getName() {
 		return name;
+	}
+	
+	public int getDrawable() {
+		return drawable;
 	}
 
 }

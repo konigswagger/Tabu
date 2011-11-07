@@ -2,20 +2,25 @@ package edu.berkeley.bid.cs160.opus;
 
 import java.util.ArrayList;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
 
 public class UserAdapter extends BaseAdapter {
 	private ArrayList<User> users = new ArrayList<User>();
-	private static final String[] usernames = {"New User", "Guest", "Josef", "Gautam", "Hussein", "Austin", "Nancy"};
+	private static final String[] usernames = {"New User", "Guest", "Gautam", "Hussein", "Austin", "Josef", "Nancy"};
+	private static final int[] userpics = {R.drawable.user_picture_default, R.drawable.user_picture_default, R.drawable.gautam, R.drawable.josef, R.drawable.austin,  R.drawable.user_picture_default, R.drawable.nancy};
+	
+	
 	
 	public UserAdapter() {
 		for (int i = 0; i < usernames.length; i++) {
-			users.add(new User(usernames[i], null));
+			users.add(new User(usernames[i], userpics[i]));
 		}
 	}
 
@@ -40,8 +45,10 @@ public class UserAdapter extends BaseAdapter {
 		User user = users.get(position);
 		
 		TextView userName = (TextView) convertView.findViewById(R.id.tv_user_name);
+		QuickContactBadge userPic = (QuickContactBadge) convertView.findViewById(R.id.qc_user_pic);
 		userName.setText(user.getName());
-	
+		userPic.setImageResource(user.getDrawable());
+
 		return convertView;
 	}
 	
