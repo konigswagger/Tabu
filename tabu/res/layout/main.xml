@@ -74,7 +74,7 @@
 			android:textSize="35sp" 
 			android:layout_width="350dp"
 			android:background="#6600FF"
-			android:onClick="onFriendClicked"
+			android:onClick="onInviteClicked"
 			>
 		</Button>
 		<TextView
