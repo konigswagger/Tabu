@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bizcard"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_weight="0.73"
+        android:background="#6600FF"
+        android:text="B"
+        android:textSize="60dp" />
+
+    <Button
+        android:id="@+id/bt_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="149dp"
+        android:layout_weight="0.73"
+        android:background="#6600FF"
+        android:text="A"
+        android:textSize="60dp" />
+
+    <Button
+        android:id="@+id/bt_continue"
+        android:layout_width="450dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="59dp"
+        android:layout_weight="0.73"
+        android:background="#6600FF"
+        android:text="Continue"
+        android:textSize="60dp" />
+
+    <Button
+        android:id="@+id/bt_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.73"
+        android:background="#6600FF"
+        android:text="C"
+        android:textSize="60dp" />
+
+</LinearLayout>
