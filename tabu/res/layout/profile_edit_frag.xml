@@ -2,8 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" android:weightSum="1" android:layout_gravity="fill_vertical|fill_horizontal" android:gravity="center_vertical|center_horizontal">
 
-    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal" android:paddingBottom="50dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textAppearance="?android:attr/textAppearanceLarge" android:layout_weight="0.4" android:gravity="center_vertical|center_horizontal" android:textSize="50sp"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6" android:textSize="50sp">
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal" android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook:"
+            android:textAppearance="?android:attr/textAppearanceLarge" android:layout_weight="1" android:gravity="center_vertical|center_horizontal" android:textSize="50sp"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect" android:layout_weight="1" android:textSize="50sp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
