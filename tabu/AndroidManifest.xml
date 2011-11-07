@@ -16,6 +16,8 @@
         </activity>
         <activity android:name=".StartActivity" android:label="Welcome!"></activity>
         <activity android:name=".CameraSample" android:label="Take a picture!"></activity>
+        <activity android:name=".ArcadeActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
 
     </application>
 </manifest>

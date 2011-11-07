@@ -3,14 +3,15 @@ package edu.berkeley.bid.cs160.opus;
 import java.util.LinkedList;
 
 public enum Scene {
-	TAXI_WRONG		(R.layout.intro, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
-	TAXI_RIGHT		(R.layout.intro, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
-	TAXI			(R.layout.intro, 			false,	null,		0,	0,	0,	0, TAXI_RIGHT,	TAXI_WRONG,	null,	null),
-	BIZCARD_WRONG	(R.layout.intro, 			true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
-	BIZCARD_RIGHT	(R.layout.intro, 			true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
-	BIZCARD			(R.layout.bizcard, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
-	AIRPORT			(R.layout.airport,			true,	BIZCARD,	0,	0,	0,	0, BIZCARD_RIGHT,	BIZCARD_WRONG,	null,	null),	
-	INTRO			(R.layout.intro,			true,	null,		0,	0,	0,	0, null,	null,	null,	null);
+	// SCENE		LAYOUT					CONT BUTTON? CONT SCENE A 	B	C	D	A		B		C		D
+	TAXI_WRONG		(R.layout.taxi_wrong, 		false,	null,		0,	0,	0,	0, null,	null,	null,	null),
+	TAXI_RIGHT		(R.layout.taxi_right, 		false,	null,		0,	0,	0,	0, null,	null,	null,	null),
+	TAXI			(R.layout.taxi, 			false,	null,		0,	0,	0,	0, TAXI_RIGHT,	TAXI_WRONG,	null,	null),
+	BIZCARD_WRONG	(R.layout.bizcard_wrong,	true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
+	BIZCARD_RIGHT	(R.layout.bizcard_right,	true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
+	BIZCARD			(R.layout.bizcard, 			false,	null,		0,	0,	0,	0, BIZCARD_RIGHT,	BIZCARD_WRONG,	null,	null),
+	AIRPORT			(R.layout.airport,			true,	BIZCARD,	0,	0,	0,	0, null,	null,	null,	null),	
+	INTRO			(R.layout.intro,			true,	AIRPORT,	0,	0,	0,	0, null,	null,	null,	null);
 		
 	private int layout;
 	private int valueA;

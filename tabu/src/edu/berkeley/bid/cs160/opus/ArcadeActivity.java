@@ -40,7 +40,8 @@ public class ArcadeActivity extends Activity {
         super.onCreate(savedInstanceState);
         // The activity is being created.
         
-        rl_arcade = (RelativeLayout) findViewById(Scene.INTRO.getLayout());
+        currentScene = Scene.AIRPORT;
+        setContentView(currentScene.getLayout());
         
     }
     
