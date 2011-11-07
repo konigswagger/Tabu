@@ -1,15 +1,39 @@
 package edu.berkeley.bid.cs160.opus;
 
-import java.util.LinkedList;
-
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 public class ArcadeActivity extends Activity {
 	RelativeLayout rl_arcade;
-	int	currentScene;
+	Scene currentScene;
 	
+	
+	public void onContinueClicked(View view) {
+		currentScene = currentScene.getContinueScene();
+		setContentView(currentScene.getLayout());
+	}
+	
+	public void onButtonAClicked(View view) {
+		currentScene = currentScene.getSceneA();
+		setContentView(currentScene.getLayout());
+	}
+	
+	public void onButtonBClicked(View view) {
+		currentScene = currentScene.getSceneB();
+		setContentView(currentScene.getLayout());
+	}
+	
+	public void onButtonCClicked(View view) {
+		currentScene = currentScene.getSceneC();
+		setContentView(currentScene.getLayout());
+	}
+	
+	public void onButtonDClicked(View view) {
+		currentScene = currentScene.getSceneD();
+		setContentView(currentScene.getLayout());
+	}
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,10 +41,6 @@ public class ArcadeActivity extends Activity {
         // The activity is being created.
         
         rl_arcade = (RelativeLayout) findViewById(Scene.INTRO.getLayout());
-        
-        
-        
-
         
     }
     
@@ -49,5 +69,7 @@ public class ArcadeActivity extends Activity {
         super.onDestroy();
         // The activity is about to be destroyed.
     }
+    
+    
 	
 }

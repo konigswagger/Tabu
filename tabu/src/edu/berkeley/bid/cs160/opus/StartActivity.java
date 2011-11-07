@@ -11,7 +11,7 @@ public class StartActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
-       setContentView(R.layout.start);
+       setContentView(R.layout.bizcard);
     }
     
     @Override

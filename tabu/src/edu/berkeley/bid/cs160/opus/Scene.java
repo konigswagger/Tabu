@@ -3,14 +3,14 @@ package edu.berkeley.bid.cs160.opus;
 import java.util.LinkedList;
 
 public enum Scene {
-	INTRO			(R.layout.intro,			0,	0,	0,	0, null,	null,	null,	null),
-	AIRPORT			(R.layout.intro,			0,	0,	0,	0, null,	null,	null,	null),
-	BIZCARD			(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null),
-	BIZCARD_RIGHT	(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null),
-	BIZCARD_WRONG	(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null),
-	TAXI			(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null),
-	TAXI_RIGHT		(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null),
-	TAXI_WRONG		(R.layout.intro, 			0,	0,	0,	0, null,	null,	null,	null);
+	TAXI_WRONG		(R.layout.intro, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
+	TAXI_RIGHT		(R.layout.intro, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
+	TAXI			(R.layout.intro, 			false,	null,		0,	0,	0,	0, TAXI_RIGHT,	TAXI_WRONG,	null,	null),
+	BIZCARD_WRONG	(R.layout.intro, 			true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
+	BIZCARD_RIGHT	(R.layout.intro, 			true,	TAXI,		0,	0,	0,	0, null,	null,	null,	null),
+	BIZCARD			(R.layout.bizcard, 			false,	null,		0,	0,	0,	0, null,	null,	null,	null),
+	AIRPORT			(R.layout.airport,			true,	BIZCARD,	0,	0,	0,	0, BIZCARD_RIGHT,	BIZCARD_WRONG,	null,	null),	
+	INTRO			(R.layout.intro,			true,	null,		0,	0,	0,	0, null,	null,	null,	null);
 		
 	private int layout;
 	private int valueA;
@@ -21,8 +21,10 @@ public enum Scene {
 	private Scene sceneB;
 	private Scene sceneC;
 	private Scene sceneD;
+	private Scene sceneCont;
+	private boolean contButton;
 	
-	private Scene (int layout, int valueA, int valueB, int valueC, int valueD, 
+	private Scene (int layout, boolean contButton, Scene sceneCont, int valueA, int valueB, int valueC, int valueD, 
 			Scene sceneA, Scene sceneB, Scene sceneC, Scene sceneD) {
 		this.layout = layout;
 		this.valueA = valueA;
@@ -33,6 +35,8 @@ public enum Scene {
 		this.sceneB = sceneB;
 		this.sceneC = sceneC;
 		this.sceneD = sceneD;
+		this.sceneCont = sceneCont;
+		this.contButton = contButton;
 	}
 	
 	public int getLayout() {
@@ -69,6 +73,14 @@ public enum Scene {
 	
 	public int getValueD() {
 		return valueD;
+	}
+	
+	public Scene getContinueScene() {
+		return sceneCont;
+	}
+	
+	public boolean isContinue() {
+		return contButton;
 	}
 
 	
