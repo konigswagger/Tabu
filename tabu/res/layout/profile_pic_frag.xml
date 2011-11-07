@@ -15,7 +15,7 @@
         android:onClick="doSomething" 
         android:padding="10dp" 
         android:layout_gravity="bottom|center_horizontal" 
-        android:src="@drawable/user_picture_default" 
+        android:src="@drawable/husseinpic" 
         android:layout_weight="0.5"/>
 
     <TextView
