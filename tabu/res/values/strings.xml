@@ -11,5 +11,4 @@
     <string name="user_describe">Check your scores or \n create a new user.</string>
     <string name="friend_describe">Tell your friends about \n this game.</string>
     <string name="pick_title">Pick a Country</string>
-    <string name="introdescribe">You will visit China for two days with a limited  amount of money. There are different levels that will be unlocked as you progress through the story line. Your objective is to pass all the levels with the largest sum of money at the end. If at any time you run out of money, you will have to start again from the first level.</string>
 </resources>
