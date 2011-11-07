@@ -30,6 +30,7 @@
 			android:textSize="60dp"
 			android:layout_width="450dp"
 			android:background="#6600FF"
+			android:onClick="onArcadeClicked"
 		>
 		</Button>
 		<TextView 
@@ -54,6 +55,7 @@
 			android:textSize="60sp" 
 			android:layout_width="450dp"
 			android:background="#6600FF"
+			android:onClick="onOnlineClicked"
 			>
 		</Button>
 		<TextView 
@@ -72,6 +74,7 @@
 			android:textSize="35sp" 
 			android:layout_width="350dp"
 			android:background="#6600FF"
+			android:onClick="onFriendClicked"
 			>
 		</Button>
 		<TextView
