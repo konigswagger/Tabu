@@ -29,7 +29,7 @@
 			android:id="@+id/Button01"
 			android:textSize="60dp"
 			android:layout_width="450dp"
-			android:background="#6600FF"
+			android:background="@drawable/button_color"
 			android:onClick="onArcadeClicked"
 		>
 		</Button>
@@ -54,7 +54,7 @@
 			android:id="@+id/Button02" 
 			android:textSize="60sp" 
 			android:layout_width="450dp"
-			android:background="#6600FF"
+			android:background="@drawable/button_color"
 			android:onClick="onOnlineClicked"
 			>
 		</Button>
@@ -73,7 +73,7 @@
 			android:id="@+id/Button03" 
 			android:textSize="35sp" 
 			android:layout_width="350dp"
-			android:background="#6600FF"
+			android:background="@drawable/button_color"
 			android:onClick="onInviteClicked"
 			>
 		</Button>

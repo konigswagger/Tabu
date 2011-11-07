@@ -20,9 +20,10 @@
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="133dp"
             android:layout_marginLeft="203dp"
-            android:background="#6600FF"
+            android:background="@drawable/button_color"
             android:text="Start"
             android:onClick="onContinueClicked"
+            android:padding="15dp"
             android:textSize="50dp" />
 
     </RelativeLayout>
