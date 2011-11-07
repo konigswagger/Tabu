@@ -8,8 +8,6 @@ import android.widget.RelativeLayout;
 
 public class ArcadeActivity extends Activity {
 	RelativeLayout rl_arcade;
-	LinkedList<Scene> scenes;
-	
 	int	currentScene;
 	
 	
@@ -18,27 +16,14 @@ public class ArcadeActivity extends Activity {
         super.onCreate(savedInstanceState);
         // The activity is being created.
         
-        rl_arcade = (RelativeLayout) findViewById(R.id.rl_arcade);
-        button1 = (Button);
+        rl_arcade = (RelativeLayout) findViewById(Scene.INTRO.getLayout());
         
-        if (scenes.isEmpty()) {
-        	// fill from database or something
-        	// setup current scene
-        } else {
-        	currentScene = 1;
-        }
         
-        setBackground(currentScene);
-        setButtons(currentScene);
+        
+
+        
     }
-    private void setButtons(int scene) {
-		// TODO Auto-generated method stub
-		
-	}
-	private void setBackground(int scene) {
-		 rl_arcade.setBackgroundResource(scenes.get(scene).getImage());
-		
-	}
+    
 	@Override
     protected void onStart() {
         super.onStart();
