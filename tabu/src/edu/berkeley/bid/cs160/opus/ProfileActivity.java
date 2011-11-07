@@ -12,10 +12,15 @@ public class ProfileActivity extends Activity {
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.profile1menu, menu);
-		menu.findItem(R.id.profileBarEdit).setVisible(false);
-		menu.findItem(R.id.profileBarBack).setVisible(false);
+		//menu.findItem(R.id.profileBarEdit).setVisible(false);
+		//menu.findItem(R.id.profileBarBack).setVisible(false);
 		menu.findItem(R.id.profileBarSave).setVisible(false);
 		menu.findItem(R.id.profileBarCancel).setVisible(false);
 		return super.onCreateOptionsMenu(menu);
 	}
+	
+	
+	
+	
+	
 }
