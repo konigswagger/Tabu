@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:gravity="right"
         android:orientation="vertical"
-        android:paddingTop="300dp" >
+        android:paddingTop="320dp" >
 
         <Button
             android:id="@+id/bt_a"
@@ -23,7 +23,7 @@
            	android:background="@drawable/button_color"
             android:text="A"
             android:onClick="onButtonAClicked"
-            android:textSize="60dp"
+            android:textSize="50dp"
      	>
             
 		</Button>
@@ -36,18 +36,18 @@
             android:background="@drawable/button_color"
             android:text="B"
             android:onClick="onButtonBClicked"
-            android:textSize="60dp" >
+            android:textSize="50dp" >
 		</Button>
         <Button
             android:id="@+id/bt_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="60dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_color"
             android:text="C"
             android:onClick="onButtonCClicked"
-            android:textSize="60dp">
+            android:textSize="50dp">
         </Button>
         
         <Button
@@ -55,11 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/button_color"
             android:text="D"
             android:onClick="onButtonDClicked"
-            android:textSize="60dp">
+            android:textSize="50dp">
         </Button>
 
         <Button
