@@ -1,7 +1,10 @@
 package edu.berkeley.bid.cs160.opus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -34,6 +37,26 @@ public class ArcadeActivity extends Activity {
 		currentScene = currentScene.getSceneD();
 		setContentView(currentScene.getLayout());
 	}
+	
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+      getMenuInflater().inflate(R.menu.default_menu, menu);
+      return super.onCreateOptionsMenu(menu);
+    }
+    
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+        case R.id.help:
+// Do something when help is clicked.
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {

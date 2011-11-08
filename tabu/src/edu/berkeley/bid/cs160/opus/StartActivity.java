@@ -16,7 +16,7 @@ public class StartActivity extends Activity {
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.start_menu, menu);
+      getMenuInflater().inflate(R.menu.default_menu, menu);
       return super.onCreateOptionsMenu(menu);
     }
     

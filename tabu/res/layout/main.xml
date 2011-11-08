@@ -6,7 +6,7 @@
     android:weightSum="1"
     android:paddingTop="300dp"
     android:gravity="center_horizontal"
-    android:background="@drawable/titlescreen_00"
+    android:background="@drawable/title_screen"
     >
 	<!--Use this code if you want the title to just be an image, not background picture
 		<ImageView 
@@ -38,7 +38,7 @@
 			android:layout_width="wrap_content"
 			android:text="@string/arcade_describe"
 			android:textSize="30sp"
-			android:textColor="#000033"
+			android:textColor="#FFFFFF"
 		></TextView>
 	</LinearLayout>
 	<LinearLayout 
@@ -63,7 +63,7 @@
 			android:layout_width="wrap_content"
 			android:text="@string/online_describe"
 			android:textSize="30sp"
-			android:textColor="#000033"
+			android:textColor="#FFFFFF"
 			android:paddingBottom="20dp"
 		></TextView>
 		
@@ -82,7 +82,7 @@
 			android:layout_width="wrap_content"
 			android:text="@string/friend_describe"
 			android:textSize="25dp" 
-			android:textColor="#000033"
+			android:textColor="#FFFFFF"
 		></TextView>
 	</LinearLayout>
 </LinearLayout>

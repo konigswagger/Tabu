@@ -13,5 +13,12 @@ public class SelectCountryActivity extends Activity {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.select_country);
     }
+ 
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+      getMenuInflater().inflate(R.menu.default_menu, menu);
+      return super.onCreateOptionsMenu(menu);
+    }
     
 }
