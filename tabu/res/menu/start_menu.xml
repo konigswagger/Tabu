@@ -4,4 +4,5 @@
         android:title="Camera"
         android:icon="@drawable/ic_menu_camera_holo_dark"
         android:showAsAction="always|withText" />
+        
 </menu>

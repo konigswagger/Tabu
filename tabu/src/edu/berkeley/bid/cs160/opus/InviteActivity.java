@@ -8,6 +8,8 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -127,7 +129,24 @@ public class InviteActivity extends Activity implements OnClickListener{
 		
      }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+      getMenuInflater().inflate(R.menu.default_menu, menu);
+      return super.onCreateOptionsMenu(menu);
+    }
+    
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+        case R.id.help:
+// Do something when help is clicked.
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
 
 	
 }
