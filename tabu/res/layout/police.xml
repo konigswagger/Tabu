@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/police"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingTop="300dp" >
+
+        <Button
+            android:id="@+id/bt_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="15dp"
+           	android:background="@drawable/button_color"
+            android:text="A"
+            android:onClick="onButtonAClicked"
+            android:textSize="60dp"
+     	>
+            
+		</Button>
+        <Button
+            android:id="@+id/bt_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_color"
+            android:text="B"
+            android:onClick="onButtonBClicked"
+            android:textSize="60dp" >
+		</Button>
+        <Button
+            android:id="@+id/bt_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_color"
+            android:text="C"
+            android:onClick="onButtonCClicked"
+            android:textSize="60dp">
+        </Button>
+        
+        <Button
+            android:id="@+id/bt_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_color"
+            android:text="D"
+            android:onClick="onButtonDClicked"
+            android:textSize="60dp">
+        </Button>
+
+        <Button
+            android:id="@+id/bt_continue"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="500dp"
+            android:background="@drawable/button_color"
+            android:onClick="onContinueClicked"
+            android:text="Continue"
+            android:textSize="50dp"
+            android:visibility="invisible"
+            ></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
