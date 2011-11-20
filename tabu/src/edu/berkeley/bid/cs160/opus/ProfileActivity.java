@@ -74,12 +74,12 @@ public class ProfileActivity extends Activity {
         	
         	Fragment profileInfo = fm.findFragmentById(R.id.profile_info_frag);
         	
-        	//TextView userName = profileInfo.getTextView();
+        	TextView userName = (TextView) profileInfo.getView().findViewById(R.id.tv_user_name);
         	
         	intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
     				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.putExtra("User", "New user");
+            intent.putExtra("User", userName.getText());
             startActivityForResult(intent, 0);
             Toast t = Toast.makeText(getApplicationContext(), "User Saved!", Toast.LENGTH_LONG);
             t.show();

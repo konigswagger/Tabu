@@ -140,7 +140,7 @@ public class InviteActivity extends Activity implements OnClickListener{
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-        case R.id.help:
+        case R.id.menu_help:
 // Do something when help is clicked.
             return true;
         default:
