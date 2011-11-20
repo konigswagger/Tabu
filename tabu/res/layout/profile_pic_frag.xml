@@ -2,29 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:gravity="center_vertical|center_horizontal">
+    android:orientation="vertical" android:padding="10dp">
 
-    <QuickContactBadge
-        android:id="@+id/quickContactBadgePP1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:clickable="true" 
-        android:minHeight="100dp" 
-        android:minWidth="100dp" 
-        android:onClick="doSomething" 
-        android:padding="10dp" 
-        android:layout_gravity="bottom|center_horizontal" 
-        android:src="@drawable/user_picture_default" 
-        android:layout_weight="0.5" 
-        android:maxHeight="100dp" 
-        android:maxWidth="100dp"/> 
-
-    <TextView
-        android:id="@+id/textViewPP1"
+    <ImageView
+        android:id="@+id/iv_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="top|center_horizontal" android:lines="1" android:textSize="75sp"/>
+        android:src="@drawable/user_picture_default" 
+        android:layout_gravity="center_vertical|center_horizontal" 
+        android:padding="25dp" 
+        android:maxHeight="250dp" 
+        android:maxWidth="250dp" 
+        android:minHeight="250dp" 
+        android:minWidth="250dp" android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="40dp" android:layout_gravity="center_vertical|center_horizontal" android:layout_weight="2"/>
 
 </LinearLayout>

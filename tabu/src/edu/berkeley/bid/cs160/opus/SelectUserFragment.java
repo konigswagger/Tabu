@@ -43,12 +43,16 @@ public class SelectUserFragment extends ListFragment {
 				if (tv.getText() == "New User") {
 					Intent intent = new Intent(SelectUserFragment.this.getActivity(), ProfileActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		            startActivity(intent);
+		            intent.putExtra("Edit", true);
+
+		            startActivityForResult(intent, 0);
+
 					
 				} else {
 					Intent intent = new Intent(SelectUserFragment.this.getActivity(), MainActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		            startActivity(intent);
+		            intent.putExtra("User", String.valueOf(tv.getText()));
+		            startActivityForResult(intent, 0);
 				}
 			}
 		});

@@ -1,6 +1,5 @@
 package edu.berkeley.bid.cs160.opus;
 
-import java.util.LinkedList;
 
 public enum Scene {
 	// SCENE		LAYOUT					CONT BUTTON? CONT SCENE A 	B	C	D	A		B		C		D
