@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="@drawable/background">
+    android:layout_height="match_parent" android:background="@drawable/background" android:id="@+id/profile_main">
 
     <fragment android:name="edu.berkeley.bid.cs160.opus.profilePicFrag"
         android:id="@+id/profile_pic_frag"
@@ -11,6 +11,12 @@
         android:layout_weight="0.3" android:layout_gravity="center_vertical|center_horizontal"/>
     
     <fragment android:name="edu.berkeley.bid.cs160.opus.profileEditFrag"
+        android:id="@+id/profile_edit_frag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7" android:layout_gravity="center_vertical|center_horizontal"/>
+    
+    <fragment android:name="edu.berkeley.bid.cs160.opus.profileInfoFrag"
         android:id="@+id/profile_info_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -6,20 +6,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class StartActivity extends Activity {
+public class StartActivity extends OpusActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.start);
-    }
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.default_menu, menu);
-      return super.onCreateOptionsMenu(menu);
-    }
-    
+    }   
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -43,7 +43,9 @@ public class SelectUserFragment extends ListFragment {
 				if (tv.getText() == "New User") {
 					Intent intent = new Intent(SelectUserFragment.this.getActivity(), ProfileActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 		            intent.putExtra("Edit", true);
+		            intent.putExtra("New", true);
 
 		            startActivityForResult(intent, 0);
 

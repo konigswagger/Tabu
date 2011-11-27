@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class MainActivity extends OpusActivity {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, SelectCountryActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
 				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("User", user);
         startActivity(intent);
     }
     
@@ -29,26 +30,8 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, InviteActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
 				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("User", user);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.default_menu, menu);
-      return super.onCreateOptionsMenu(menu);
-    }
-    
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-        case R.id.menu_help:
-// Do something when help is clicked.
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
     }
     
 }

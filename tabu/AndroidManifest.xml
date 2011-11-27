@@ -21,5 +21,6 @@
         <activity android:name=".ProfileActivity" android:label="Profile"></activity>
         <activity android:name=".InviteActivity" android:label="Invite Friends"></activity>
         <activity android:name=".SelectCountryActivity" android:label="Select a Country"></activity>
+        <activity android:name=".OpusActivity"></activity>
     </application>
 </manifest>

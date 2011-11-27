@@ -42,6 +42,7 @@ public class SelectCountryFragment extends ListFragment {
 				if (tv.getText() == "China") {
 					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), ArcadeActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		            intent.putExtra("User", ((OpusActivity) getActivity()).user);
 		            startActivity(intent);
 					
 				} else {

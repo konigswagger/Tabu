@@ -1,6 +1,5 @@
 package edu.berkeley.bid.cs160.opus;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -8,13 +7,11 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class InviteActivity extends Activity implements OnClickListener{
+public class InviteActivity extends OpusActivity implements OnClickListener{
     /** Called when the activity is first created. */
 	 private Button facebook;
 	 private Button contacts;
@@ -127,26 +124,6 @@ public class InviteActivity extends Activity implements OnClickListener{
         // can lose track of our dialog if there's an orientation change.
         return dialog;
 		
-     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.default_menu, menu);
-      return super.onCreateOptionsMenu(menu);
-    }
-    
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-        case R.id.menu_help:
-// Do something when help is clicked.
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
-
+	}
 	
 }

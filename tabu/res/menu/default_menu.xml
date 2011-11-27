@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/menu_help" 
-        android:title="Helo" 
+    <item android:id="@+id/menu_profile" android:title="Profile" android:visible="true" android:showAsAction="always" android:enabled="true" android:orderInCategory="1">
+    </item><item android:id="@+id/menu_help" 
+        android:title="Help" 
         android:icon="@drawable/ic_menu_help" 
         android:visible="true" 
         android:showAsAction="always" 
-        android:enabled="true">
+        android:enabled="true" android:orderInCategory="2">
     </item>
-    <item android:id="@+id/menu_profile"
-        android:title="Profile"
-        android:icon="@drawable/user_picture_default"
-        android:actionViewClass="android.widget.SearchView" 
-        android:showAsAction="ifRoom"/>
+    
         
 </menu>
