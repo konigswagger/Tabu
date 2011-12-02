@@ -11,4 +11,6 @@
     <string name="user_describe">Check your scores or \n create a new user.</string>
     <string name="friend_describe">Tell your friends about \n this game.</string>
     <string name="pick_title">Pick a Country</string>
+    <string name="profile">PROFILE</string>
+    <string name="profile_describe">Look up account and check your status.</string>
 </resources>
