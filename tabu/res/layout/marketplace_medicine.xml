@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marketplace_medicine"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="275dp" >
+
+        <Button
+            android:id="@+id/bt_continue"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/button_color"
+            android:text="Continue"
+            android:onClick="onContinueClicked"
+            android:textSize="50dp" 
+        >
+        </Button>
+
+    </LinearLayout>
+
+    
+
+</LinearLayout>
