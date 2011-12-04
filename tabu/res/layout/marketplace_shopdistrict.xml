@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/marketplace_shopdistrict"
     android:orientation="vertical" >
-    
-     <LinearLayout
+
+    <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,14 +19,9 @@
             android:layout_height="75dp"
             android:layout_marginTop="55dp"
             android:background="@drawable/button_color"
-            android:text="Continue"
             android:onClick="onContinueClicked"
-            android:textSize="50dp" 
-        >
-        </Button>
-
+            android:text="Go to Shops"
+            android:textSize="50dp" />
     </LinearLayout>
-
-    
 
 </LinearLayout>
