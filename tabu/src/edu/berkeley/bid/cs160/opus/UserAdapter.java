@@ -2,12 +2,11 @@ package edu.berkeley.bid.cs160.opus;
 
 import java.util.ArrayList;
 
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.QuickContactBadge;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -45,7 +44,7 @@ public class UserAdapter extends BaseAdapter {
 		User user = users.get(position);
 		
 		TextView userName = (TextView) convertView.findViewById(R.id.tv_user_name);
-		QuickContactBadge userPic = (QuickContactBadge) convertView.findViewById(R.id.qc_user_pic);
+		ImageView userPic = (ImageView) convertView.findViewById(R.id.qc_user_pic);
 		userName.setText(user.getName());
 		userPic.setImageResource(user.getDrawable());
 
