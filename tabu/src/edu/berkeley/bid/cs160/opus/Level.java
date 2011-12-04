@@ -2,8 +2,11 @@ package edu.berkeley.bid.cs160.opus;
 
 import java.util.Arrays;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,7 +30,9 @@ public class Level extends OpusActivity {
 	    Bundle b = getIntent().getExtras();
 	    Log.i("LEVEL","Country " + b.getString("Country"));
 	    String[] temp = Arrays.copyOf(((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).keySet().toArray(), ((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).keySet().toArray().length, String[].class);
-	    
+	    String t = temp[2];
+	    temp[2] = temp[3];
+	    temp[3] = t;
 	    for(String x : temp)
 	    {
 	    	Log.i("LEVEL","Level: " + x);
@@ -38,6 +43,17 @@ public class Level extends OpusActivity {
 		    {
 	    		case 'i':
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.intro_icon));
+			    		iv.setOnClickListener(new OnClickListener() 
+			            {
+			                public void onClick(View v) 
+			                {
+			                	Intent intent = new Intent(Level.this, ArcadeActivity.class);
+			                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			                    intent.putExtra("User",  user);
+			                    startActivity(intent);
+			                }
+			            });
+			    
 			    	break;
 	    		case 'a':
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
@@ -72,11 +88,8 @@ public class Level extends OpusActivity {
 		    }
 	    	ll.addView(iv);
 
-	    }/*
-	    Intent intent = new Intent(Level.this, ArcadeActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("User",  user);
-        startActivity(intent);*/
+	    }
+	    
 	}
 
 }
