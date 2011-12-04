@@ -6,8 +6,10 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -48,6 +50,12 @@ public class ProfileActivity extends Activity {
 			userName.setText(user);
 		}
 	}
+	
+	public void onFacebookConnectClicked(View view) {
+		Toast toast = Toast.makeText(getApplicationContext(), "Connection to Facebook not implemented yet.", Toast.LENGTH_SHORT);
+		toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+		toast.show();
+    }
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
@@ -109,6 +117,7 @@ public class ProfileActivity extends Activity {
 	            intent.putExtra("User", user);
 	            startActivity(intent);
 	            Toast t = Toast.makeText(getApplicationContext(), "User Saved!", Toast.LENGTH_SHORT);
+	            t.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 	            t.show();
 	            newMode = false;
         	} else {

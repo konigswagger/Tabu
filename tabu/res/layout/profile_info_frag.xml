@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" android:padding="20dp">
 
         <TextView
             android:id="@+id/textView1"
@@ -29,7 +29,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" android:padding="50dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -51,20 +51,20 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal">
+        android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal" android:padding="20dp">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Facebook:"
-            android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="1" android:gravity="center_vertical|center_horizontal" android:textSize="50sp"/>
+            android:layout_weight="0.4"/>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/ConnectFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Connect" android:layout_weight="1" android:textSize="50sp"/>
+            android:layout_weight="0.6"
+            android:background="@drawable/facebookconnect" android:height="75dp" android:onClick="onFacebookConnectClicked" android:clickable="true"/>
 
     </LinearLayout>
 
