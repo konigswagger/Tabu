@@ -73,7 +73,7 @@ public enum Scene {
 		return valueA;
 	}
 	
-	public int getValueV() {
+	public int getValueB() {
 		return valueB;
 	}
 	
