@@ -3,9 +3,11 @@ package edu.berkeley.bid.cs160.opus;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends OpusActivity {
 	
@@ -24,6 +26,9 @@ public class MainActivity extends OpusActivity {
     }
     
     public void onOnlineClicked(View view) {
+    	Toast toast = Toast.makeText(getApplicationContext(), "Online gameplay currently not available.", Toast.LENGTH_SHORT);
+    	toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+    	toast.show();
     }
     
     public void onInviteClicked(View view) {

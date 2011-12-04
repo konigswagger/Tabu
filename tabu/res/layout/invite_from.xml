@@ -4,47 +4,47 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content" android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView2"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="30px"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="20dp"
-        android:layout_y="14dp"
-        android:paddingBottom="30px"
-        android:paddingLeft="50px"
-        android:text="INVITE FROM"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50px" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30px"
+            android:paddingLeft="50px"
+            android:text="INVITE FROM"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50px" android:padding="40dp"/>
 
-    <Button
-        android:id="@+id/facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="10dp"
-        android:layout_y="205dp"
-        android:gravity="center_horizontal"
-        android:text="FACEBOOK"
-        android:textSize="50px"
-        android:width="400px" 
-        android:onClick="showDialogFacebook"/>
+        <Button
+            android:id="@+id/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:onClick="onFacebookClicked"
+            android:textSize="50px"
+            android:width="400px" android:padding="10dp" android:background="@drawable/button_color" android:text="FACEBOOK"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge" android:padding="50dp"/>
 
-    <Button
-        android:id="@+id/contacts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="21dp"
-        android:layout_y="415dp"
-        android:gravity="center_horizontal|center"
-        android:text="CONTACTS"
-        android:textSize="50px"
-        android:width="400px" 
-        android:onClick="showDialogContacts"/>
+        <Button
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:onClick="onContactsClicked"
+            android:text="CONTACTS"
+            android:textSize="50px"
+            android:width="400px" android:padding="10dp" android:background="@drawable/button_color"/>
+
+    </LinearLayout>
 
 </AbsoluteLayout>
