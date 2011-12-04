@@ -19,7 +19,7 @@
         <activity android:name=".ArcadeActivity" android:label="China" android:theme="@style/OpusActionBar"></activity>
         <activity android:name=".MainActivity" android:label="Main Menu" android:theme="@style/OpusActionBar"></activity>
         <activity android:name=".ProfileActivity" android:label="Profile" android:theme="@style/OpusActionBar"></activity>
-        <activity android:name=".Level" android:label="Level" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".LevelActivity" android:label="Level" android:theme="@style/OpusActionBar"></activity>
         <activity android:name=".InviteActivity" android:label="Invite Friends" android:theme="@style/OpusActionBar"></activity>
         <activity android:name=".SelectCountryActivity" android:label="Select a Country" android:theme="@style/OpusActionBar"></activity>
         <activity android:name=".OpusActivity" android:theme="@style/OpusActionBar"></activity>
