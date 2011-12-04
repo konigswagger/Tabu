@@ -31,6 +31,16 @@ public class MainActivity extends OpusActivity {
     	toast.show();
     }
     
+    public void onProfileClicked(View view) {
+    	Intent intent = new Intent(this, ProfileActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+				| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("User", user);
+        intent.putExtra("New", false);
+        intent.putExtra("Edit", false);
+        startActivityForResult(intent, 10);
+    }
+    
     public void onInviteClicked(View view) {
     	Intent intent = new Intent(this, InviteActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK

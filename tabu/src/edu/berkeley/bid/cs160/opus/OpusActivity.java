@@ -74,6 +74,11 @@ public class OpusActivity extends Activity {
             intent.putExtra("Edit", false);
             startActivityForResult(intent, 10);
         	return true;
+        case android.R.id.home:
+        	Intent intentHome = new Intent(this, MainActivity.class);
+        	intentHome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        	//intentHome.putExtra("User", String.valueOf(tv.getText()));
+        	startActivityForResult(intentHome, 0);
         default:
             return super.onOptionsItemSelected(item);
         }

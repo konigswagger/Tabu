@@ -48,9 +48,9 @@
 		    android:layout_width="350dp"
 		    android:layout_height="70dp"
 		    android:background="@drawable/button_color"
-		    android:onClick="onInviteClicked"
+		    android:onClick="onProfileClicked"
 		    android:text="@string/profile"
-		    android:textSize="35sp" />
+		    android:textSize="35sp" android:clickable="true"/>
 
 		<TextView
 			android:layout_height="fill_parent"
