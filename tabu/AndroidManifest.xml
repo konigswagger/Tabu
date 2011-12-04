@@ -8,19 +8,19 @@
 
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:logo="@drawable/tabu_small">
         <activity android:name=".TabuActivity"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name" android:theme="@style/OpusActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity" android:label="Welcome!"></activity>
-        <activity android:name=".CameraSample" android:label="Take a picture!"></activity>
-        <activity android:name=".ArcadeActivity" android:label="China"></activity>
-        <activity android:name=".MainActivity" android:label="Main Menu"></activity>
-        <activity android:name=".ProfileActivity" android:label="Profile"></activity>
-        <activity android:name=".InviteActivity" android:label="Invite Friends"></activity>
-        <activity android:name=".SelectCountryActivity" android:label="Select a Country"></activity>
-        <activity android:name=".OpusActivity"></activity>
+        <activity android:name=".StartActivity" android:label="Welcome!" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".CameraSample" android:label="Take a picture!" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".ArcadeActivity" android:label="China" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".MainActivity" android:label="Main Menu" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".ProfileActivity" android:label="Profile" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".InviteActivity" android:label="Invite Friends" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".SelectCountryActivity" android:label="Select a Country" android:theme="@style/OpusActionBar"></activity>
+        <activity android:name=".OpusActivity" android:theme="@style/OpusActionBar"></activity>
     </application>
 </manifest>

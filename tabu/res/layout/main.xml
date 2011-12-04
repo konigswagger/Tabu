@@ -42,17 +42,16 @@
 			android:textColor="#FFFFFF"
 			android:paddingBottom="20dp"
 		></TextView>
-		
-		<Button 
-			android:layout_height="70dp" 
-			android:text="@string/profile" 
-			android:id="@+id/Button04" 
-			android:textSize="35sp" 
-			android:layout_width="350dp"
-			android:background="@drawable/button_color"
-			android:onClick="onInviteClicked"
-			>
-		</Button>
+
+		<Button
+		    android:id="@+id/Button04"
+		    android:layout_width="350dp"
+		    android:layout_height="70dp"
+		    android:background="@drawable/button_color"
+		    android:onClick="onInviteClicked"
+		    android:text="@string/profile"
+		    android:textSize="35sp" />
+
 		<TextView
 			android:layout_height="fill_parent"
 			android:layout_width="wrap_content"
