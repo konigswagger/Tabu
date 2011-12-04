@@ -40,9 +40,11 @@ public class SelectCountryFragment extends ListFragment {
 				LinearLayout ll = (LinearLayout) view;
 				TextView tv = (TextView) ll.getChildAt(0);
 				if (tv.getText() == "China") {
-					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), ArcadeActivity.class);
+					/*Intent intent = new Intent(SelectCountryFragment.this.getActivity(), ArcadeActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		            intent.putExtra("User", ((OpusActivity) getActivity()).user);
+		            intent.putExtra("User", ((OpusActivity) getActivity()).user);*/
+					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), Level.class); 
+		            intent.putExtra("Country", tv.getText());
 		            startActivity(intent);
 					
 				} else {
