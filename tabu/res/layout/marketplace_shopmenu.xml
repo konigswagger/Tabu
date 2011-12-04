@@ -3,8 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/marketplace_shopmenu"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingTop="200dp"
+     >
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="30dp"
+		android:gravity="center_horizontal"
+		>
+		<Button 
+			android:layout_height="100dp" 
+			android:text="@string/online" 
+			android:id="@+id/Button01" 
+			android:textSize="60sp" 
+			android:layout_width="450dp"
+			android:background="@drawable/button_color"
+			android:onClick="onOnlineClicked"
+			>
+			</Button>
+	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="30dp"
+		android:gravity="center_horizontal"
+		>
+		<Button 
+			android:layout_height="100dp" 
+			android:text="@string/online" 
+			android:id="@+id/Button02" 
+			android:textSize="60sp" 
+			android:layout_width="450dp"
+			android:background="@drawable/button_color"
+			android:onClick="onOnlineClicked"
+			>
+			</Button>
+	
+	</LinearLayout>
 
+    
+    
     
 
 </LinearLayout>
