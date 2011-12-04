@@ -2,7 +2,11 @@ package edu.berkeley.bid.cs160.opus;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ArcadeActivity extends OpusActivity {
@@ -54,6 +58,30 @@ public class ArcadeActivity extends OpusActivity {
 
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
+		
+		
+		LayoutInflater inflater = getLayoutInflater();
+	    View layout = inflater.inflate(R.layout.toast_pos,
+	                                   (ViewGroup) findViewById(R.id.toast_pos_root));
+	    /*
+	    ImageView image = (ImageView) layout.findViewById(R.id.flower);
+	    image.setImageResource(R.drawable.flower);
+	    */
+	    TextView text2 = (TextView) layout.findViewById(R.id.text);
+	    if (points > 0){
+	    	text2.setText("Good Job!");
+	    }else{
+	    	text2.setText("Too Bad!");
+	    }
+
+	    Toast toast2 = new Toast(getApplicationContext());
+	    toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+	    toast2.setDuration(Toast.LENGTH_LONG);
+	    toast2.setView(layout);
+	    toast2.show();
+		
+		
+		
 	}
 	
 }
