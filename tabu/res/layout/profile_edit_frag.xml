@@ -44,7 +44,7 @@
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:background="@drawable/facebookconnect" android:height="75dp"/>
+            android:background="@drawable/facebookconnect" android:height="75dp" android:onClick="onFacebookConnectClicked" android:clickable="true"/>
 
     </LinearLayout>
 
