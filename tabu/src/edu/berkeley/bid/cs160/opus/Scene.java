@@ -8,7 +8,7 @@ public enum Scene {
 	POLICE			(R.layout.police,			false, 	null,		0,	0,	0,	0, POLICE_WRONG, POLICE_WRONG, POLICE_RIGHT, POLICE_WRONG),
 	HOTEL_RIGHT		(R.layout.hotelwater_right,	true, 	POLICE,		0,	0,	0,	0,	null, null, null, null),
 	HOTEL_WRONG		(R.layout.hotelwater_wrong,	true, 	POLICE,		0,	0,	0,	0,	null, null, null, null),
-	HOTEL_WATER		(R.layout.hotelwater,		false, 	null,		0,	0,	0,	0,	HOTEL_WRONG, HOTEL_WRONG, HOTEL_RIGHT, null),
+	HOTEL_WATER		(R.layout.hotelwater,		false, 	null,		0,	0,	0,	0,	HOTEL_WRONG, HOTEL_RIGHT, HOTEL_WRONG, null),
 	HOTEL			(R.layout.hotel,			true,	HOTEL_WATER,0,	0,	0,	0,	null,	null,	null, 	null),
 	TAXI_WRONG		(R.layout.taxi_wrong, 		true,	HOTEL,		0,	0,	0,	0, null,	null,	null,	null),
 	TAXI_RIGHT		(R.layout.taxi_right, 		true,	HOTEL,		0,	0,	0,	0, null,	null,	null,	null),
