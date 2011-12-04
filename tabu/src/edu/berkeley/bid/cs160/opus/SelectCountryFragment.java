@@ -43,7 +43,7 @@ public class SelectCountryFragment extends ListFragment {
 					/*Intent intent = new Intent(SelectCountryFragment.this.getActivity(), ArcadeActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		            intent.putExtra("User", ((OpusActivity) getActivity()).user);*/
-					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), Level.class); 
+					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), LevelActivity.class); 
 		            intent.putExtra("Country", tv.getText());
 		            startActivity(intent);
 					

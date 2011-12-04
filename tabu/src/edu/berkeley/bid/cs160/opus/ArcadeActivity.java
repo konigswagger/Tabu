@@ -41,8 +41,9 @@ public class ArcadeActivity extends OpusActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        currentScene = Scene.AIRPORT;
+        Bundle b = getIntent().getExtras();
+        String level = b.getString("level");
+        currentScene = Scene.valueOf(level);
         setContentView(currentScene.getLayout());
     }
     

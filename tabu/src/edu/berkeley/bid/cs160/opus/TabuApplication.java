@@ -33,7 +33,7 @@ public class TabuApplication extends Application{
 	@Override
 	public void onTerminate() {
 		  //reinitialize variable
-		  this.CountryLevels.clear();
+		  //this.CountryLevels.clear();
 	}
 	
 

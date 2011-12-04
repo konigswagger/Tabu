@@ -11,7 +11,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class Level extends OpusActivity {
+public class LevelActivity extends OpusActivity {
 
 	HorizontalScrollView sv;
 	LinearLayout ll;
@@ -47,8 +47,9 @@ public class Level extends OpusActivity {
 			            {
 			                public void onClick(View v) 
 			                {
-			                	Intent intent = new Intent(Level.this, ArcadeActivity.class);
+			                	Intent intent = new Intent(LevelActivity.this, ArcadeActivity.class);
 			                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			                    intent.putExtra("level",  Scene.INTRO.toString());
 			                    intent.putExtra("User",  user);
 			                    startActivity(intent);
 			                }
@@ -59,6 +60,18 @@ public class Level extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.airport_icon));
+			    		iv.setOnClickListener(new OnClickListener() 
+			            {
+			                public void onClick(View v) 
+			                {
+			                	Intent intent = new Intent(LevelActivity.this, ArcadeActivity.class);
+			                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			                    intent.putExtra("level",  Scene.AIRPORT.toString());
+			                    intent.putExtra("User",  user);
+			                    startActivity(intent);
+			                }
+			            });
+			    
 			    	}
 			    	else
 			    	{
@@ -69,6 +82,18 @@ public class Level extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.shopping_icon_unlocked));
+			    		iv.setOnClickListener(new OnClickListener() 
+			            {
+			                public void onClick(View v) 
+			                {
+			                	Intent intent = new Intent(LevelActivity.this, ArcadeActivity.class);
+			                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			                    intent.putExtra("level",  Scene.MARKETPLACE_SHOPDISTRICT.toString());
+			                    intent.putExtra("User",  user);
+			                    startActivity(intent);
+			                }
+			            });
+			    
 			    	}
 			    	else
 			    	{
@@ -79,6 +104,18 @@ public class Level extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.hotel_icon_unlocked));
+			    		iv.setOnClickListener(new OnClickListener() 
+			            {
+			                public void onClick(View v) 
+			                {
+			                	Intent intent = new Intent(LevelActivity.this, ArcadeActivity.class);
+			                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			                    intent.putExtra("level",  Scene.HOTEL.toString());
+			                    intent.putExtra("User",  user);
+			                    startActivity(intent);
+			                }
+			            });
+			    
 			    	}
 			    	else
 			    	{
