@@ -1,6 +1,6 @@
 package edu.berkeley.bid.cs160.opus;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,8 +15,14 @@ public class ArcadeActivity extends OpusActivity {
 	
 	
 	public void onContinueClicked(View view) {
-		currentScene = currentScene.getContinueScene();
-		setContentView(currentScene.getLayout());
+		Scene nextScene = currentScene.getContinueScene();
+
+		if (nextScene == null) {
+			endLevel();
+		} else {
+			currentScene = nextScene;
+			setContentView(currentScene.getLayout());
+		}
 	}
 	
 	public void onButtonAClicked(View view) {
@@ -42,7 +48,15 @@ public class ArcadeActivity extends OpusActivity {
 		setContentView(currentScene.getLayout());
 		showToast(currentScene.getValueD());
 	}
+	
+	private void endLevel() {
+		Intent intent = new Intent(this, LevelActivity.class); 
+        intent.putExtra("Country", "China");
+        intent.putExtra("Level", "ended");
+        startActivity(intent);
+	}
 
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +67,6 @@ public class ArcadeActivity extends OpusActivity {
     
 	
 	private void showToast(int points) {
-		Context context = getApplicationContext();
-		CharSequence text = points + " Points!";
-		int duration = Toast.LENGTH_SHORT;
-
-		Toast toast = Toast.makeText(context, text, duration);
-		toast.show();
-		
 		
 		LayoutInflater inflater = getLayoutInflater();
 	    View layout = inflater.inflate(R.layout.toast_pos,
@@ -79,14 +86,11 @@ public class ArcadeActivity extends OpusActivity {
 	    	text2.setText("Too Bad!");
 	    }
 
-	    Toast toast2 = new Toast(getApplicationContext());
-	    toast2.setGravity(Gravity.TOP, 0, 0);
-	    toast2.setDuration(Toast.LENGTH_LONG);
-	    toast2.setView(layout);
-	    toast2.show();
-		
-		
-		
+	    Toast toast = new Toast(getApplicationContext());
+	    toast.setGravity(Gravity.TOP, 0, 0);
+	    toast.setDuration(Toast.LENGTH_LONG);
+	    toast.setView(layout);
+	    toast.show();
 	}
 	
 }
