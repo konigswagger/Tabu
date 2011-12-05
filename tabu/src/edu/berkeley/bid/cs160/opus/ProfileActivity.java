@@ -120,7 +120,8 @@ public class ProfileActivity extends OpusActivity {
     				"'(Your name)' on top right takes you to this profile screen where you can edit or view your profile.\n\n" +
     				"‘Edit' allows you to edit your user profile.\n\n" +
     				"‘Cancel' goes back without saving any changes.\n\n" +
-    				"'Done' saves the changes you made.");
+    				"'Done' saves the changes you made.\n\n" +
+    				"Note: Connection to Facebook and adding a profile picture not implemented yet.");
     		builder.setCancelable(false);
     		builder.setNegativeButton("Close", new OnClickListener() {
     			public void onClick(DialogInterface dialog, int id) {
