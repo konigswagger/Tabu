@@ -30,7 +30,15 @@
 	
 	</LinearLayout>
 
-    
+    <Button
+            android:id="@+id/bt_continue"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/button_color"
+            android:onClick="onContinueClicked"
+            android:text="Continue"
+            android:textSize="50dp" />
     
     
 
