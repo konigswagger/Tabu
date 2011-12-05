@@ -1,10 +1,14 @@
 package edu.berkeley.bid.cs160.opus;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -87,6 +91,25 @@ public class ProfileActivity extends OpusActivity {
     	Intent intent;
     	
         switch (item.getItemId()) {
+        case R.id.menu_help:
+        	// Do something when help is clicked.
+        	Builder builder = new AlertDialog.Builder(this);
+    		builder.setTitle("Profile Help");
+    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n\n" + 
+    				"'?' on the top right takes you to this pop-up help screen.\n\n" +
+    				"'(Your name)' on top right takes you to this profile screen where you can edit or view your profile.\n\n" +
+    				"‘Edit' allows you to edit your user profile.\n\n" +
+    				"‘Cancel' goes back without saving any changes.\n\n" +
+    				"'Done' saves the changes you made.");
+    		builder.setCancelable(false);
+    		builder.setNegativeButton("Close", new OnClickListener() {
+    			public void onClick(DialogInterface dialog, int id) {
+    				dialog.cancel();
+    			}
+    		});
+    		AlertDialog help = builder.create();
+    		help.show();
+            return true;
         case R.id.profileBarEdit:
         	editMode = true;
         	
