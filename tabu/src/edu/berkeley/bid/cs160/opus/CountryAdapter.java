@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -40,6 +41,12 @@ public class CountryAdapter extends BaseAdapter {
 		Country country = countries.get(position);
 		
 		TextView countryName = (TextView) convertView.findViewById(R.id.tv_country_name);
+		
+		if (countryName.getText() != "China") {
+			ImageView image = (ImageView) convertView.findViewById(R.id.image_lock);
+		    image.setImageResource(R.drawable.lock);
+		}
+		
 		countryName.setText(country.getName());
 	
 		return convertView;
