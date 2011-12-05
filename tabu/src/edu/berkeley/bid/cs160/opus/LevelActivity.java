@@ -2,11 +2,15 @@ package edu.berkeley.bid.cs160.opus;
 
 import java.util.Arrays;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -51,7 +55,7 @@ public class LevelActivity extends OpusActivity {
 		    {
 	    		case 'i':
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.intro_icon));
-			    		iv.setOnClickListener(new OnClickListener() 
+			    		iv.setOnClickListener(new View.OnClickListener() 
 			            {
 			                public void onClick(View v) 
 			                {
@@ -68,7 +72,7 @@ public class LevelActivity extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.airport_icon));
-			    		iv.setOnClickListener(new OnClickListener() 
+			    		iv.setOnClickListener(new View.OnClickListener() 
 			            {
 			                public void onClick(View v) 
 			                {
@@ -90,7 +94,7 @@ public class LevelActivity extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.shopping_icon_unlocked));
-			    		iv.setOnClickListener(new OnClickListener() 
+			    		iv.setOnClickListener(new View.OnClickListener() 
 			            {
 			                public void onClick(View v) 
 			                {
@@ -112,7 +116,7 @@ public class LevelActivity extends OpusActivity {
 	    			if (((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).get(x))
 			    	{
 			    		iv.setImageDrawable(getResources().getDrawable(R.drawable.hotel_icon_unlocked));
-			    		iv.setOnClickListener(new OnClickListener() 
+			    		iv.setOnClickListener(new View.OnClickListener() 
 			            {
 			                public void onClick(View v) 
 			                {
@@ -149,5 +153,32 @@ public class LevelActivity extends OpusActivity {
 			}
 		}
 	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+        case R.id.menu_help:
+        	// Do something when help is clicked.
+        	Builder builder = new AlertDialog.Builder(this);
+    		builder.setTitle("Select Levels Help");
+    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n\n" + 
+    				"'?' on the top right takes you to this pop-up help screen.\n\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n\n" +
+    				"Scroll sideways to see all the levels that you have unlocked.\n\n" +
+    				"You only can play levels that have been unlocked.\n\n" +
+    				"Completing the latest level will unlock the next one.");
+    		builder.setCancelable(false);
+    		builder.setNegativeButton("Close", new OnClickListener() {
+    			public void onClick(DialogInterface dialog, int id) {
+    				dialog.cancel();
+    			}
+    		});
+    		AlertDialog help = builder.create();
+    		help.show();
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    }
 			
 }

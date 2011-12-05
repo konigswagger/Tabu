@@ -93,11 +93,11 @@ public class ArcadeActivity extends OpusActivity {
 	    if (points > 0){
 	    	ImageView image = (ImageView) layout.findViewById(R.id.image_reaction);
 		    image.setImageResource(R.drawable.happyface);
-	    	text2.setText("Good Job!");
+	    	text2.setText("Good Job! You gained " + points + "!");
 	    }else{
 	    	ImageView image = (ImageView) layout.findViewById(R.id.image_reaction);
 		    image.setImageResource(R.drawable.sadface);
-	    	text2.setText("Too Bad!");
+	    	text2.setText("Too Bad! You got " + points + "!");
 	    }
 
 	    Toast toast = new Toast(getApplicationContext());

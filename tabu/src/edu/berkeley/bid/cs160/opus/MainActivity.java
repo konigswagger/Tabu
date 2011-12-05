@@ -60,12 +60,12 @@ public class MainActivity extends OpusActivity {
         	// Do something when help is clicked.
         	Builder builder = new AlertDialog.Builder(this);
     		builder.setTitle("Main Menu Help");
-    		builder.setMessage("'TABU' in top left takes you back to the Main Menu, which you are currently on.\n" +
-    				"'?' in top right takes you to this help screen.\n" +
-    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n" +
-    				"'ARCADE' allows you to start playing the game.\n" +	
-    				"'ONLINE' will allow you to play online with other users, but it is not implemented yet.\n" +	
-    				"'PROFILE' takes you to your profile where you can view or edit it.\n" +
+    		builder.setMessage("'TABU' in top left takes you back to the Main Menu, which you are currently on.\n\n" +
+    				"'?' in top right takes you to this help screen.\n\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n\n" +
+    				"'ARCADE' allows you to start playing the game.\n\n" +	
+    				"'ONLINE' will allow you to play online with other users, but it is not implemented yet.\n\n" +	
+    				"'PROFILE' takes you to your profile where you can view or edit it.\n\n" +
     				"'INVITE FRIENDS' allows you to choose to invite friends from Facebook or your contacts.");
     		builder.setCancelable(false);
     		builder.setNegativeButton("Close", new OnClickListener() {
