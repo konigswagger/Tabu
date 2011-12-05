@@ -22,10 +22,10 @@ public class SelectCountryActivity extends OpusActivity {
         	// Do something when help is clicked.
         	Builder builder = new AlertDialog.Builder(this);
     		builder.setTitle("Select Country Help");
-    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n" + 
-    				"'?' on the top right takes you to this pop-up help screen.\n" +
-    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n" +
-    				"Scroll throught the list of Countries to Select the Country you would like to play." +
+    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n\n" + 
+    				"'?' on the top right takes you to this pop-up help screen.\n\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n\n" +
+    				"Scroll throught the list of Countries to Select the Country you would like to play.\n\n" +
     				"Currently China is the only Country that has been implemented.");
     		builder.setCancelable(false);
     		builder.setNegativeButton("Close", new OnClickListener() {

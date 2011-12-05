@@ -161,11 +161,11 @@ public class LevelActivity extends OpusActivity {
         	// Do something when help is clicked.
         	Builder builder = new AlertDialog.Builder(this);
     		builder.setTitle("Select Levels Help");
-    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n" + 
-    				"'?' on the top right takes you to this pop-up help screen.\n" +
-    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n" +
-    				"Scroll sideways to see all the levels that you have unlocked.\n" +
-    				"You only can play levels that have been unlocked.\n" +
+    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n\n" + 
+    				"'?' on the top right takes you to this pop-up help screen.\n\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n\n" +
+    				"Scroll sideways to see all the levels that you have unlocked.\n\n" +
+    				"You only can play levels that have been unlocked.\n\n" +
     				"Completing the latest level will unlock the next one.");
     		builder.setCancelable(false);
     		builder.setNegativeButton("Close", new OnClickListener() {

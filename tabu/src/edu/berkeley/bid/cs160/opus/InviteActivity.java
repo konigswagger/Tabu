@@ -37,11 +37,11 @@ public class InviteActivity extends OpusActivity {
         	// Do something when help is clicked.
         	Builder builder = new AlertDialog.Builder(this);
     		builder.setTitle("Invite Friends Help");
-    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n" + 
-    				"'?' on the top right takes you to this pop-up help screen.\n" +
-    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n" +
-    				"‘Facebook’ will take you to your Facebook friends so you can select who to invite.\n" +
-    				"‘Contacts’ will take you to your Contacts so you can select which friends you want to invite.\n" +
+    		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n\n" + 
+    				"'?' on the top right takes you to this pop-up help screen.\n\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n\n" +
+    				"‘Facebook’ will take you to your Facebook friends so you can select who to invite.\n\n" +
+    				"‘Contacts’ will take you to your Contacts so you can select which friends you want to invite.\n\n" +
     				"Note: Connections to ‘Facebook’ and ‘Contacts’ have not been implemented yet.");
     		builder.setCancelable(false);
     		builder.setNegativeButton("Close", new OnClickListener() {
