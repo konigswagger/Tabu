@@ -14,14 +14,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity" android:label="Welcome!" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".CameraSample" android:label="Take a picture!" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".ArcadeActivity" android:label="China" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".MainActivity" android:label="Main Menu" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".ProfileActivity" android:label="Profile" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".LevelActivity" android:label="Level" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".InviteActivity" android:label="Invite Friends" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
-        <activity android:name=".SelectCountryActivity" android:label="Select a Country" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".StartActivity" android:label="    Welcome!" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".CameraSample" android:label="    Take a picture!" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".ArcadeActivity" android:label="    China" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".MainActivity" android:label="    Main Menu" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".ProfileActivity" android:label="    Profile" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".LevelActivity" android:label="    Select a Level" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".InviteActivity" android:label="    Invite Friends" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
+        <activity android:name=".SelectCountryActivity" android:label="    Select a Country" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
         <activity android:name=".OpusActivity" android:theme="@style/OpusActionBar" android:screenOrientation="landscape"></activity>
     </application>
 </manifest>
