@@ -26,33 +26,40 @@ public class ArcadeActivity extends OpusActivity {
 	}
 	
 	public void onButtonAClicked(View view) {
+		currentScore = currentScore + currentScene.getValueA();
+		showToast(currentScene.getValueA());
 		currentScene = currentScene.getSceneA();
 		setContentView(currentScene.getLayout());
-		showToast(currentScene.getValueA());
+
 	}
 
 	public void onButtonBClicked(View view) {
+		currentScore = currentScore + currentScene.getValueB();
+		showToast(currentScene.getValueB());
 		currentScene = currentScene.getSceneB();
 		setContentView(currentScene.getLayout());
-		showToast(currentScene.getValueB());
 	}
 	
 	public void onButtonCClicked(View view) {
+		currentScore = currentScore + currentScene.getValueC();
+		showToast(currentScene.getValueC());
 		currentScene = currentScene.getSceneC();
 		setContentView(currentScene.getLayout());
-		showToast(currentScene.getValueC());
 	}
 	
 	public void onButtonDClicked(View view) {
+		currentScore = currentScore + currentScene.getValueD();
+		showToast(currentScene.getValueD());
 		currentScene = currentScene.getSceneD();
 		setContentView(currentScene.getLayout());
-		showToast(currentScene.getValueD());
 	}
 	
 	private void endLevel() {
 		Intent intent = new Intent(this, LevelActivity.class); 
         intent.putExtra("Country", "China");
-        intent.putExtra("Level", "ended");
+        intent.putExtra("Ended", "true");
+        intent.putExtra("User", user);
+        intent.putExtra("Score", String.valueOf(currentScore));
         startActivity(intent);
 	}
 
@@ -61,7 +68,10 @@ public class ArcadeActivity extends OpusActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        currentScene = Scene.AIRPORT;
+        Bundle b = getIntent().getExtras();
+        String level = b.getString("level");
+        
+        currentScene = Scene.valueOf(level);
         setContentView(currentScene.getLayout());
     }
     

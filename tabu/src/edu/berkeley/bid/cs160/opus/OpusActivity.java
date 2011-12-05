@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 public class OpusActivity extends Activity {
 	public String user;
+	public int currentScore = 0;
 	private FragmentManager fm;
 	private FragmentTransaction ft;
 	
@@ -31,12 +32,20 @@ public class OpusActivity extends Activity {
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		MenuItem profileButton = menu.findItem(R.id.menu_profile);
+		MenuItem userScore = menu.findItem(R.id.menu_score);
 		
 		if(user != null) {
 			profileButton.setVisible(true);
 			profileButton.setTitle(user);
 		} else {
 			profileButton.setVisible(false);
+		}
+		
+		if (currentScore != 0) {
+			userScore.setVisible(true);
+			userScore.setTitle(currentScore + "Points");
+		} else {
+			userScore.setVisible(false);
 		}
 			
 		return true;
@@ -46,12 +55,20 @@ public class OpusActivity extends Activity {
 		getMenuInflater().inflate(R.menu.default_menu, menu);
 		
 		MenuItem profileButton = menu.findItem(R.id.menu_profile);
+		MenuItem userScore = menu.findItem(R.id.menu_score);
 		
 		if(user != null) {
 			profileButton.setVisible(true);
 			profileButton.setTitle(user);
 		} else {
 			profileButton.setVisible(false);
+		}
+		
+		if (currentScore != 0) {
+			userScore.setVisible(true);
+			userScore.setTitle(currentScore + "Points");
+		} else {
+			userScore.setVisible(false);
 		}
 		
 		return super.onCreateOptionsMenu(menu);
