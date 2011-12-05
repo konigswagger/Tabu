@@ -15,6 +15,7 @@ public class LevelActivity extends OpusActivity {
 
 	HorizontalScrollView sv;
 	LinearLayout ll;
+	String country;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,14 @@ public class LevelActivity extends OpusActivity {
 	    
 	   
 	    Bundle b = getIntent().getExtras();
+	    
 	    Log.i("LEVEL","Country " + b.getString("Country"));
+	    country = b.getString("Country");
+	    boolean unlocked = b.getBoolean("Ended", false);
+	    if(unlocked)
+	    {
+	    	unlockNext();
+	    }
 	    String[] temp = Arrays.copyOf(((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).keySet().toArray(), ((TabuApplication)getApplication()).getStructure().get(b.getString("Country")).keySet().toArray().length, String[].class);
 	    String t = temp[2];
 	    temp[2] = temp[3];
@@ -129,4 +137,17 @@ public class LevelActivity extends OpusActivity {
 	    
 	}
 
+	public void unlockNext()
+	{
+		String[] levels = {"INTRO",  "AIRPORT", "HOTEL" ,"SHOPPING"};
+		for(String level:levels)
+		{
+			if (!((TabuApplication)getApplication()).getStructure().get(country).get(level))
+			{
+				((TabuApplication)getApplication()).getStructure().get(country).put(level, true);
+				break;
+			}
+		}
+	}
+			
 }

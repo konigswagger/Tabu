@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hotelwater_wrong_2"
-    android:orientation="vertical" >
-
+    android:orientation="vertical" android:background="@drawable/end_of_level">
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
@@ -17,11 +15,11 @@
             android:layout_height="75dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="107dp"
-            android:layout_marginRight="118dp"
+            android:layout_marginBottom="138dp"
+            android:layout_marginRight="120dp"
             android:background="@drawable/button_color"
             android:onClick="onContinueClicked"
-            android:text="Continue"
+            android:text="Finish"
             android:textSize="50dp" />
 
     </RelativeLayout>

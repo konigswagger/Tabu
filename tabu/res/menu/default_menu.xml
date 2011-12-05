@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/menu_profile" android:title="Profile" android:visible="true" android:showAsAction="always" android:enabled="true" android:orderInCategory="1">
-    </item><item android:id="@+id/menu_help" 
+    </item><item android:id="@+id/menu_score" android:showAsAction="always" android:visible="true" android:enabled="true" android:orderInCategory="2" android:title="Score"></item><item android:id="@+id/menu_help" 
         android:title="Help" 
         android:icon="@drawable/ic_menu_help" 
         android:visible="true" 
         android:showAsAction="always" 
-        android:enabled="true" android:orderInCategory="2">
+        android:enabled="true" android:orderInCategory="3">
     </item>
+    
     
         
 </menu>
