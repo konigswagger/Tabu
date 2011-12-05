@@ -39,7 +39,7 @@ public class InviteActivity extends OpusActivity {
     		builder.setTitle("Invite Friends Help");
     		builder.setMessage("'TABU' on the top left takes you back to the Main Menu.\n" + 
     				"'?' on the top right takes you to this pop-up help screen.\n" +
-    				"'(Your name)' on top right takes you to your profile.\n" +
+    				"'(Your name)' on top right takes you to your profile where you can view or edit it.\n" +
     				"‘Facebook’ will take you to your Facebook friends so you can select who to invite.\n" +
     				"‘Contacts’ will take you to your Contacts so you can select which friends you want to invite.\n" +
     				"Note: Connections to ‘Facebook’ and ‘Contacts’ have not been implemented yet.");
