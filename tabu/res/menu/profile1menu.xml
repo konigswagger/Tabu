@@ -3,7 +3,6 @@
     <item android:id="@+id/profileBarSave" android:showAsAction="always|withText" android:title="Done" android:orderInCategory="1" android:icon="@drawable/ic_menu_save"></item>
     <item android:id="@+id/profileBarEdit" android:title="Edit" android:icon="@drawable/ic_menu_edit" android:showAsAction="always|withText" android:orderInCategory="2"></item>
     <item android:id="@+id/profileBarCancel" android:title="Cancel" android:icon="@drawable/ic_menu_cancel" android:showAsAction="always|withText"></item>
-    <item android:id="@+id/profileBarBack" android:icon="@drawable/ic_menu_back" android:showAsAction="always|withText" android:title="Back"></item>
 
     
 

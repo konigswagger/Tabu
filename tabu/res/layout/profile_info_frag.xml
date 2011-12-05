@@ -53,18 +53,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal" android:padding="20dp">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/buttonFacebookConnect"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.4"/>
-
-        <Button
-            android:id="@+id/ConnectFacebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.6"
-            android:background="@drawable/facebookconnect" android:height="75dp" android:onClick="onFacebookConnectClicked" android:clickable="true"/>
+            android:onClick="onFacebookConnectClicked"
+            android:src="@drawable/facebook_button" />
 
     </LinearLayout>
 

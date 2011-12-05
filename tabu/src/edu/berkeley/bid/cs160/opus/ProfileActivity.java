@@ -71,12 +71,12 @@ public class ProfileActivity extends OpusActivity {
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		if (editMode) {
 			menu.findItem(R.id.profileBarEdit).setVisible(false);
-			menu.findItem(R.id.profileBarBack).setVisible(false);
+			//menu.findItem(R.id.profileBarBack).setVisible(false);
 			menu.findItem(R.id.profileBarSave).setVisible(true);
 			menu.findItem(R.id.profileBarCancel).setVisible(true);
 		} else {
 			menu.findItem(R.id.profileBarEdit).setVisible(true);
-			menu.findItem(R.id.profileBarBack).setVisible(true);
+			//menu.findItem(R.id.profileBarBack).setVisible(true);
 			menu.findItem(R.id.profileBarSave).setVisible(false);
 			menu.findItem(R.id.profileBarCancel).setVisible(false);
 		}
@@ -119,12 +119,12 @@ public class ProfileActivity extends OpusActivity {
 			ft.commit();
         	invalidateOptionsMenu();
             return true;
-        case R.id.profileBarBack:
-        	Intent resultIntent = new Intent();
-        	resultIntent.putExtra("User", user);
-        	setResult(Activity.RESULT_OK, resultIntent);
-        	finish();
-        	return true;
+        //case R.id.profileBarBack:
+        	//Intent resultIntent = new Intent();
+        	//resultIntent.putExtra("User", user);
+        	//setResult(Activity.RESULT_OK, resultIntent);
+        	//finish();
+        	//return true;
         case R.id.profileBarSave:
         	editMode = false;
         	invalidateOptionsMenu();
