@@ -57,7 +57,7 @@ public class ArcadeActivity extends OpusActivity {
 	private void endLevel() {
 		Intent intent = new Intent(this, LevelActivity.class); 
         intent.putExtra("Country", "China");
-        intent.putExtra("Ended", "true");
+        intent.putExtra("Ended", true);
         intent.putExtra("User", user);
         intent.putExtra("Score", String.valueOf(currentScore));
         startActivity(intent);
