@@ -26,7 +26,7 @@ public class SelectCountryFragment extends ListFragment {
 		
 		setListAdapter(new CountryAdapter());
 		
-		lv.setScrollbarFadingEnabled(false);
+		
 		
 	}
 	
@@ -35,6 +35,7 @@ public class SelectCountryFragment extends ListFragment {
 		super.onStart();
 		
 		lv = getListView();
+		lv.setScrollbarFadingEnabled(false);
 				
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
