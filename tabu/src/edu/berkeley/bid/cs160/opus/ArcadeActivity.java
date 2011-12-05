@@ -27,6 +27,7 @@ public class ArcadeActivity extends OpusActivity {
 	
 	public void onButtonAClicked(View view) {
 		currentScore = currentScore + currentScene.getValueA();
+		invalidateOptionsMenu();
 		showToast(currentScene.getValueA());
 		currentScene = currentScene.getSceneA();
 		setContentView(currentScene.getLayout());
@@ -35,6 +36,7 @@ public class ArcadeActivity extends OpusActivity {
 
 	public void onButtonBClicked(View view) {
 		currentScore = currentScore + currentScene.getValueB();
+		invalidateOptionsMenu();
 		showToast(currentScene.getValueB());
 		currentScene = currentScene.getSceneB();
 		setContentView(currentScene.getLayout());
@@ -42,6 +44,7 @@ public class ArcadeActivity extends OpusActivity {
 	
 	public void onButtonCClicked(View view) {
 		currentScore = currentScore + currentScene.getValueC();
+		invalidateOptionsMenu();
 		showToast(currentScene.getValueC());
 		currentScene = currentScene.getSceneC();
 		setContentView(currentScene.getLayout());
@@ -49,6 +52,7 @@ public class ArcadeActivity extends OpusActivity {
 	
 	public void onButtonDClicked(View view) {
 		currentScore = currentScore + currentScene.getValueD();
+		invalidateOptionsMenu();
 		showToast(currentScene.getValueD());
 		currentScene = currentScene.getSceneD();
 		setContentView(currentScene.getLayout());
