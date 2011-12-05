@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ProfileActivity extends Activity {
+public class ProfileActivity extends OpusActivity {
 	
 	public boolean editMode;
 	public boolean newMode;
