@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,9 +46,8 @@ public class ArcadeActivity extends OpusActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle b = getIntent().getExtras();
-        String level = b.getString("level");
-        currentScene = Scene.valueOf(level);
+        
+        currentScene = Scene.AIRPORT;
         setContentView(currentScene.getLayout());
     }
     
@@ -70,13 +70,17 @@ public class ArcadeActivity extends OpusActivity {
 	    */
 	    TextView text2 = (TextView) layout.findViewById(R.id.text);
 	    if (points > 0){
+	    	ImageView image = (ImageView) layout.findViewById(R.id.image_reaction);
+		    image.setImageResource(R.drawable.happyface);
 	    	text2.setText("Good Job!");
 	    }else{
+	    	ImageView image = (ImageView) layout.findViewById(R.id.image_reaction);
+		    image.setImageResource(R.drawable.sadface);
 	    	text2.setText("Too Bad!");
 	    }
 
 	    Toast toast2 = new Toast(getApplicationContext());
-	    toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+	    toast2.setGravity(Gravity.TOP, 0, 0);
 	    toast2.setDuration(Toast.LENGTH_LONG);
 	    toast2.setView(layout);
 	    toast2.show();
