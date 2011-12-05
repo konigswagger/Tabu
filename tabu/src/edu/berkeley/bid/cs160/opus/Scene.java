@@ -3,7 +3,7 @@ package edu.berkeley.bid.cs160.opus;
 
 public enum Scene {
 	// SCENE					LAYOUT								CONT BUTTON? CONT SCENE 					A 		B		C		D	A					B					C				D
-	END							(R.layout.end,						true,		null,							0,		0,		0,		0,	null,				null,				null,			null),
+	END							(R.layout.end,						false,		null,							0,		0,		0,		0,	null,				null,				null,			null),
 	MARKETPLACE_SHOPMENU	 	(R.layout.marketplace_shopmenu, 	false,		null,							0,		0,		0,		0,	null,				null,				null,			null),
 	MARKETPLACE_SHOPDISTRICT 	(R.layout.marketplace_shopdistrict, true,		MARKETPLACE_SHOPMENU,			0,		0,		0,		0,	null,				null,				null,			null),
 	POLICE_RIGHT				(R.layout.police_right,				true, 		END,							0,		0,		0,		0,	null, 				null, 				null,			null),
