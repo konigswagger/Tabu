@@ -44,7 +44,9 @@ public class CountryAdapter extends BaseAdapter {
 		
 		TextView countryName = (TextView) convertView.findViewById(R.id.tv_country_name);
 		
-		if (countryName.getText() != "China") {
+		String countryText = country.getName();
+		
+		if (countryText != "China") {
 			ImageView image = (ImageView) convertView.findViewById(R.id.image_lock);
 		    image.setImageResource(R.drawable.lock);
 		} else{
