@@ -3,14 +3,17 @@ package edu.berkeley.bid.cs160.opus;
 import android.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
+
 
 public class SelectCountryFragment extends ListFragment {
 	ListView lv;
@@ -51,6 +54,11 @@ public class SelectCountryFragment extends ListFragment {
 		            startActivity(intent);
 					
 				} else {
+					
+					Toast toast = Toast.makeText(getActivity().getApplicationContext(), "Country currently locked.", Toast.LENGTH_SHORT);
+			    	toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+			    	toast.show();
+					
 					Intent intent = new Intent(SelectCountryFragment.this.getActivity(), SelectCountryActivity.class);
 		            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		            startActivity(intent);

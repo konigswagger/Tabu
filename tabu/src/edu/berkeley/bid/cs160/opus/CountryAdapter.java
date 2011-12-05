@@ -2,12 +2,14 @@ package edu.berkeley.bid.cs160.opus;
 
 import java.util.ArrayList;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class CountryAdapter extends BaseAdapter {
@@ -45,12 +47,16 @@ public class CountryAdapter extends BaseAdapter {
 		if (countryName.getText() != "China") {
 			ImageView image = (ImageView) convertView.findViewById(R.id.image_lock);
 		    image.setImageResource(R.drawable.lock);
+		} else{
+			ImageView image = (ImageView) convertView.findViewById(R.id.image_lock);
+			image.setImageResource(R.drawable.icon);
 		}
 		
 		countryName.setText(country.getName());
 	
 		return convertView;
 	}
+	
 	
 	
 }
