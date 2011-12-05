@@ -26,6 +26,8 @@ public class SelectCountryFragment extends ListFragment {
 		
 		setListAdapter(new CountryAdapter());
 		
+		lv.setScrollbarFadingEnabled(false);
+		
 	}
 	
 	@Override
