@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -41,12 +42,10 @@ public class OpusActivity extends Activity {
 			profileButton.setVisible(false);
 		}
 		
-		if (currentScore != 0) {
+		Log.i("DUMP", this.getClass().toString());
 			userScore.setVisible(true);
-			userScore.setTitle(currentScore + "Points");
-		} else {
-			userScore.setVisible(false);
-		}
+			userScore.setTitle(currentScore + " Points");
+
 			
 		return true;
 	}

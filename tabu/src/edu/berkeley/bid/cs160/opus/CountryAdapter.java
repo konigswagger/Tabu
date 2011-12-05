@@ -51,7 +51,7 @@ public class CountryAdapter extends BaseAdapter {
 		    image.setImageResource(R.drawable.lock);
 		} else{
 			ImageView image = (ImageView) convertView.findViewById(R.id.image_lock);
-			image.setImageResource(R.drawable.icon);
+			image.setImageResource(R.drawable.lock_blank);
 		}
 		
 		countryName.setText(country.getName());

@@ -1,14 +1,13 @@
 package edu.berkeley.bid.cs160.opus;
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -16,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +27,7 @@ public class ProfileActivity extends OpusActivity {
 	public FragmentTransaction ft;
 	private String user;
 	private TextView userName;
+	private ImageView userPicture;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,6 +53,25 @@ public class ProfileActivity extends OpusActivity {
 		if (user != null) {
 			userName = (TextView) fm.findFragmentById(R.id.profile_pic_frag).getView().findViewById(R.id.tv_name);
 			userName.setText(user);
+			
+			userPicture = (ImageView) fm.findFragmentById(R.id.profile_pic_frag).getView().findViewById(R.id.iv_pic);
+			
+			int pic = R.drawable.user_picture_default;
+			
+			if (user == "Hussein") {
+				pic = R.drawable.husseinpic;
+			} else if (user == "Josef") {
+				pic = R.drawable.josef;
+			} else if (user == "Nancy") {
+				pic = R.drawable.nancy;
+			} else if (user == "Gautam") {
+				pic = R.drawable.gautam;
+			} else if (user == "Austin") {
+				pic = R.drawable.austin;
+			}
+			
+			userPicture.setImageResource(pic);
+			
 		}
 	}
 	
